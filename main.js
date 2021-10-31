@@ -20,6 +20,14 @@ function setup() {
 
 function draw() {
     image(video,0,0,600,500);
+    fill('#FF0000');
+    stroke('#FF0000');
+    circle(leftWristX,leftWristY,20);
+    inNumberLeftWristY = Number(leftWristY);
+    remove_decimals = floor(inNumberLeftWristY);
+    volume = remove_decimals/500;
+    document.getElementById("volume").innerHTML = "volume = " + volume;
+    song.setVolume(volume);
 }
 
 function play() {
